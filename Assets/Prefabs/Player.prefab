@@ -75,7 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe6ff8b63f10b4dc49a21bcaecd094df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turboMultiplier: 1.75
+  turboMultiplier: 2.2
   pathCreator: {fileID: 0}
   speed: 3.5
   distanceToPath: 0.5

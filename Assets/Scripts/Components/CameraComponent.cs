@@ -1,20 +1,19 @@
-using System;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 
 namespace Mikabrytu.LD50.Components
 {
     public class CameraComponent: MonoBehaviour
     {
         [SerializeField] private Transform target;
-        [SerializeField] private float zPlaneOffset = -10;
+        [SerializeField] private Vector3 offset;
 
-        private void Update()
+        private void LateUpdate()
         {
-            var position = target.position;
-            position.y = transform.position.y;
-            position.z += zPlaneOffset;
+            var position = target.position + offset;
+            position.y = transform.position.y + offset.y;
+            
             transform.position = position;
+            transform.LookAt(target);
         }
     }
 }
