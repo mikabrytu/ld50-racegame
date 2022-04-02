@@ -14,7 +14,7 @@ namespace Mikabrytu.LD50.Components
 
         protected MoveSystem moveSystem;
 
-        private void Start()
+        private void Awake()
         {
             moveSystem = new MoveSystem(transform, pathCreator, distanceToPath);
         }

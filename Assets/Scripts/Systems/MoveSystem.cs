@@ -5,24 +5,29 @@ namespace Mikabrytu.LD50.Systems
 {
     public class MoveSystem
     {
-        private Transform transform;
-        private PathCreator pathCreator;
         private float pathFollowed;
         private float multiplier;
-        private float distanceToPath;
         private bool isTurbo;
+        private bool canMove;
+        
+        private readonly Transform transform;
+        private readonly PathCreator pathCreator;
+        private readonly float distanceToPath;
 
         public MoveSystem(Transform transform, PathCreator pathCreator, float distanceToPath)
         {
             this.transform = transform;
             this.pathCreator = pathCreator;
             this.distanceToPath = distanceToPath;
-
+            
+            StartMovement();
             CalcPath();
         }
 
         public void Move(float speed)
         {
+            if (!canMove) return;
+
             if (isTurbo)
             {
                 transform.Translate(Vector3.forward * (speed * multiplier) * Time.deltaTime);
@@ -46,6 +51,12 @@ namespace Mikabrytu.LD50.Systems
 
             if (activate == false) CalcPath();
         }
+
+        public void StartMovement() => canMove = true;
+        
+        public void StopMovement() => canMove = false;
+
+        public bool IsTurbo() => isTurbo;
 
         private void FollowPath(float speed)
         {
