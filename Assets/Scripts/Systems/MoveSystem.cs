@@ -43,6 +43,8 @@ namespace Mikabrytu.LD50.Systems
         {
             isTurbo = activate;
             this.multiplier = multiplier;
+
+            if (activate == false) CalcPath();
         }
 
         private void FollowPath(float speed)
