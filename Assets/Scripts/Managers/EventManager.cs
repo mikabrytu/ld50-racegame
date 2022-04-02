@@ -109,7 +109,5 @@ namespace Mikabrytu.LD50.Managers
             _delegates.TryGetValue(e.GetType(), out del);
             del?.Invoke(e);
         }
-
-        // TODO: Make functions to delete stack of listeners using the _delegates dictionary
     }
 }

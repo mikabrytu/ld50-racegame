@@ -1,7 +1,7 @@
-using System;
+using UnityEngine;
+
 using Mikabrytu.LD50.Components;
 using Mikabrytu.LD50.View;
-using UnityEngine;
 
 namespace Mikabrytu.LD50.Managers
 {

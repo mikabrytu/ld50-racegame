@@ -1,5 +1,8 @@
 using UnityEngine;
 
+using Mikabrytu.LD50.Managers;
+using Mikabrytu.LD50.Events;
+
 namespace Mikabrytu.LD50.Components
 {
     public class PlayerComponent : CarComponent
@@ -8,16 +11,21 @@ namespace Mikabrytu.LD50.Components
         [SerializeField] private float maxFuel;
         [SerializeField] private float normalDecay;
         [SerializeField] private float turboDecay;
+        [SerializeField] private float recharge;
 
         private float currentFuel;
         private bool isMoving;
+
+        #region Unity Messages
 
         public void Start()
         {
             currentFuel = maxFuel;
             isMoving = true;
+            
+            EventManager.AddListener<OnPickFuelEvent>(OnPickFuel);
         }
-        
+
         public void Update()
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -30,7 +38,9 @@ namespace Mikabrytu.LD50.Components
             SpentFuel(moveSystem.IsTurbo());
         }
 
-        public float GetFuel() => currentFuel;
+        #endregion
+
+        #region Implementation
 
         private void SpentFuel(bool isTurbo)
         {
@@ -44,5 +54,22 @@ namespace Mikabrytu.LD50.Components
                 moveSystem.StopMovement();
             }
         }
+
+        #endregion
+
+        #region Listeners
+
+        private void OnPickFuel(OnPickFuelEvent e)
+        {
+            currentFuel += recharge;
+        }
+
+        #endregion
+
+        #region Public API
+
+        public float GetFuel() => currentFuel;
+
+        #endregion
     }
 }
