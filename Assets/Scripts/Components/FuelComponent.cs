@@ -11,8 +11,6 @@ namespace Mikabrytu.LD50.Components
         
         private void OnTriggerEnter(Collider other)
         {
-            Debug.Log($"Collision detected: {other.name}");
-            
             if (other.tag.Equals(fuelable))
             {
                 EventManager.Raise(new OnPickFuelEvent());
