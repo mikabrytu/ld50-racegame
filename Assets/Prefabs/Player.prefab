@@ -75,10 +75,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe6ff8b63f10b4dc49a21bcaecd094df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turboMultiplier: 2.2
+  turboMultiplier: 2.5
   pathCreator: {fileID: 0}
   speed: 3.5
   distanceToPath: 0.5
+  maxFuel: 60
+  normalDecay: 1
+  turboDecay: 10
 --- !u!4 &8095542013465446230 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7094733073156197607, guid: 9be0d859fcbe5449ca53064f07e3346c, type: 3}
