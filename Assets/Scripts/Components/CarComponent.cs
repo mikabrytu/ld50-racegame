@@ -1,3 +1,5 @@
+using System;
+using Mikabrytu.LD50.Systems;
 using PathCreation;
 using UnityEngine;
 
@@ -8,13 +10,16 @@ namespace Mikabrytu.LD50.Components
         [SerializeField] private PathCreator pathCreator;
         [SerializeField] private float speed;
 
-        private float pathFollowed;
+        private MoveSystem moveSystem;
+
+        private void Start()
+        {
+            moveSystem = new MoveSystem(transform, pathCreator);
+        }
 
         private void Update()
         {
-            pathFollowed += speed * Time.deltaTime;
-            transform.position = pathCreator.path.GetPointAtDistance(pathFollowed);
-            transform.rotation = pathCreator.path.GetRotationAtDistance(pathFollowed);
+            moveSystem.Move(speed);
         }
     }
 }
