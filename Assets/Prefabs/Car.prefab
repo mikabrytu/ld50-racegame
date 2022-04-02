@@ -47,3 +47,4 @@ MonoBehaviour:
   pathCreator: {fileID: 0}
   speed: 3.5
   turboMultiplier: 1.75
+  distanceToPath: 0.5

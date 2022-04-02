@@ -10,12 +10,13 @@ namespace Mikabrytu.LD50.Components
         [SerializeField] private PathCreator pathCreator;
         [SerializeField] private float speed;
         [SerializeField] private float turboMultiplier;
+        [SerializeField] private float distanceToPath;
 
         private MoveSystem moveSystem;
 
         private void Start()
         {
-            moveSystem = new MoveSystem(transform, pathCreator);
+            moveSystem = new MoveSystem(transform, pathCreator, distanceToPath);
         }
 
         private void Update()
