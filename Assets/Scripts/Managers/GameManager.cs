@@ -15,7 +15,7 @@ namespace Mikabrytu.LD50.Managers
 
         private void Update()
         {
-            fuelView.DisplayFuel(player.GetFuel().ToString("00"));
+            fuelView.DisplayFuel(player.GetFuel().ToString("00.0"));
         }
     }
 }
