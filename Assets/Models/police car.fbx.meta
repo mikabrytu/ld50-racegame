@@ -3,9 +3,49 @@ guid: 75005cdd12d6d49de937a800ed62c979
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: farol.009
+    second: {fileID: 2100000, guid: 474a73ab8507144b5b383baf2e588e6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glass.009
+    second: {fileID: 2100000, guid: 040b7cd5726964aa8abecb0ada34d0ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lanterna.009
+    second: {fileID: 2100000, guid: c90ad0e16989a4b6499097fa73fedcfb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: police car_ blue.002
+    second: {fileID: 2100000, guid: c0ca50e2bedba4716a23ae21f8cc7cbf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: police car_ white.003
+    second: {fileID: 2100000, guid: 83cd2e8898fa940419ebe76786cc38f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sirena_ blue.003
+    second: {fileID: 2100000, guid: 37b4d1283c142482c8aa7942517fc383, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sirena_ red.003
+    second: {fileID: 2100000, guid: 200925ee3acaf4f19a030b510ca351fe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tires.005
+    second: {fileID: 2100000, guid: 11257b1250dc94b8a836b2bce564d7c7, type: 2}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -35,7 +75,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.5
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -88,7 +128,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 0.5
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
