@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Police
       objectReference: {fileID: 0}
+    - target: {fileID: 5505014444645800803, guid: 9be0d859fcbe5449ca53064f07e3346c, type: 3}
+      propertyPath: speed
+      value: 3.8
+      objectReference: {fileID: 0}
     - target: {fileID: 7094733073156197607, guid: 9be0d859fcbe5449ca53064f07e3346c, type: 3}
       propertyPath: m_RootOrder
       value: 0
